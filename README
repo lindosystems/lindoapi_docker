@@ -1,0 +1,7 @@
+Lindo API Python Docker Image
+To build the image   > docker build /path/to/LINDOAPI_DOCKER -t pylindo
+Once built run image > docker run -t -v /path/to/your/python:/pythonVolume pylindo foo.py
+
+/path/to/your/python Is the local path to your python scripts
+/pythonVolume this is the directory in the container that has access to /path/to/your/python
+foo.py is a python script the local directory /path/to/your/python to run on the pylindo container
