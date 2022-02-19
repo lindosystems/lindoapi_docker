@@ -11,10 +11,6 @@
 
 FROM julia:latest
 
-RUN mkdir /juliaVolume
-
-VOLUME /juliaVolume
-
 WORKDIR /opt
 
 RUN  apt-get update \
@@ -26,11 +22,15 @@ RUN  apt-get update \
 
 ENV LINDOAPI_HOME=/opt/lindoapi
 
-COPY ./installLindo.jl /
+COPY ./jlPackages.jl /
 
-RUN  julia /installLindo.jl
+RUN  julia /jlPackages.jl
 
-WORKDIR /juliaVolume
+RUN mkdir /lindoVolume
+
+VOLUME /lindoVolume
+
+WORKDIR /lindoVolume
 
 COPY ./script.sh /
 

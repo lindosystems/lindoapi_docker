@@ -25,16 +25,16 @@ WORKDIR /opt/lindoapi/R
 
 RUN ./install-rlindo.sh 
 
-RUN mkdir /rVolume
+RUN mkdir /lindoVolume
 
-VOLUME /rVolum
+VOLUME /lindoVolume
 
-WORKDIR /rVolume
+WORKDIR /lindoVolume
 
-COPY ./lindo.r / \
+COPY ./rPackages.r / \
     ./script.sh /
 
-RUN Rscript /lindo.r
+RUN Rscript /rPackages.r
 
 ENTRYPOINT ["/script.sh"]
 

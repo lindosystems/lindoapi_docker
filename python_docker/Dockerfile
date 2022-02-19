@@ -26,12 +26,12 @@ ENV LINDOAPI_HOME=/opt/lindoapi
 
 RUN pip install -r /pyPackages.txt
 
-RUN mkdir /pythonVolume
+RUN mkdir /lindoVolume
 
-VOLUME /pythonVolume
+VOLUME /lindoVolume
 
-WORKDIR /pythonVolume
+WORKDIR /lindoVolume
 
 ENTRYPOINT ["/script.sh"]
 
-CMD ["-m lindo_test"]
+CMD [""]
