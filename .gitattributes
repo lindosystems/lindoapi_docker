@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Declares that files will always have CRLF line ends
+julia_docker/*.sh text eol=lf
+python_docker/*.sh text eol=lf
+r_docker/*.sh text eol=lf

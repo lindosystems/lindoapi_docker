@@ -19,12 +19,14 @@ RUN  apt-get update \
   && wget -r -O LAPI-LINUX-64x86-13.0.tar.gz https://www.lindo.com/downloads/LAPI-LINUX-64x86-13.0.tar.gz\
   && tar -xf LAPI-LINUX-64x86-13.0.tar.gz
 
-COPY ./pyPackages.txt / \
-    ./script.sh /
+COPY ./pyPackages.txt /
 
 ENV LINDOAPI_HOME=/opt/lindoapi
 
 RUN pip install -r /pyPackages.txt
+
+
+COPY ./script.sh / 
 
 RUN mkdir /lindoVolume
 
