@@ -17,7 +17,7 @@ Use the `docker build` command followed by the path to the directory with that h
 
 ## Running A Container 
 
-Once the image is built to run a container use the `docker run` command followed by the two flags `-t`, and `v`. The first tag `-t` allocates a pseudo-TTY and this will ensure that all the model output is displayed on the terminal or wherever output is redirected to. The second tag `-v` is used to connect a directory from your machine to the containers file directory. 
+Once the image is built to run a container use the `docker run` command followed by the two flags `-t`, and `-v`. The first tag `-t` allocates a pseudo-TTY and this will ensure that all the model output is displayed on the terminal or wherever output is redirected to. The second tag `-v` is used to connect a directory from your machine to the containers file directory. 
 
 ### Mac or Linux
 ``` bash
